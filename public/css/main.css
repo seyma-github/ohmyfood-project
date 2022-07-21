@@ -5,8 +5,7 @@
   box-sizing: border-box; }
 
 html {
-  height: 1800px;
-  animation: a3 1s ease-in 0.3s 1 normal forwards; }
+  height: 1800px; }
 
 body {
   font-family: "Roboto", sans-serif;
@@ -42,6 +41,20 @@ h2 {
   right: 9%;
   bottom: 16%; }
 
+@keyframes animationLoading {
+  0% {
+    opacity: 1;
+    transform: rotate(0) scale(1); }
+  100% {
+    opacity: 0;
+    transform: rotate(-540deg) scale(0); } }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+
 @keyframes a1 {
   to {
     background-color: #FF79DA; } }
@@ -58,8 +71,41 @@ h2 {
     opacity: 1;
     transform: translateY(0); } }
 
+@keyframes a4 {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes a5 {
+  0% {
+    opacity: 1;
+    transform: translateX(0); }
+  100% {
+    opacity: 0;
+    transform: translateX(100px); } }
+
 .header__logo img, .header-menu__logo a img, .header-menu__logo img, .main-menu img {
   object-fit: cover; }
+
+.loading-spinner {
+  background-color: whitesmoke;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  animation: animationLoading 1s ease 2s 1 normal forwards;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.loader {
+  border: 16px solid #c8ede4;
+  border-top: 16px solid #99E2D0;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite; }
 
 .header__logo {
   height: 15%;
@@ -161,7 +207,7 @@ h2 {
   display: inline-block;
   width: 25%;
   height: 20%;
-  color: gray;
+  color: #2f7665;
   padding-top: 2%;
   padding-left: 22px;
   background-color: #99E2D0;
@@ -253,9 +299,10 @@ h2 {
   position: absolute;
   right: 9%;
   bottom: 14%;
+  transition: background-color 3s ease-in-out;
   cursor: pointer; }
   .fa-heart:active {
-    animation: a2 forwards 5s ease-in-out; }
+    background-color: linear-gradient(180deg, #9356DC, #FF79DA); }
 
 .entrees__card, .main-dish__card, .desserts__card {
   display: flex;
@@ -284,6 +331,20 @@ h2 span:hover {
   border-top: none;
   border-bottom: 3px solid #99E2D0;
   padding-bottom: 2px; }
+
+.entrees__card:hover .price, .main-dish__card:hover .price, .desserts__card:hover .price {
+  transform: translateX(-30px);
+  transition: 1s; }
+
+.entrees__card:hover .done, .main-dish__card:hover .done, .desserts__card:hover .done {
+  animation: a5 1s ease 0s 1 reverse forwards; }
+
+.entrees__card:hover .spinner, .main-dish__card:hover .spinner, .desserts__card:hover .spinner {
+  animation: a4 1s ease 0s 1 reverse forwards; }
+
+.entrees .first, .entrees .second, .entrees .third, .entrees .fourth {
+  opacity: 0;
+  animation: a3 1s ease 0s 1 forwards; }
 
 .main-menu {
   display: flex;
@@ -322,43 +383,25 @@ h2:hover {
 h2 span:hover {
   cursor: pointer; }
 
-/*.fa-check-circle{
-    display: none;
-    &:hover{
-        display:$display;
-        background-color: $tertiary-color;
-        color: white;
-        height: 100%;
-        padding-top: 10%;
-        position:absolute;
-        right:0%;
-        border-top-right-radius: 18px;
-        border-bottom-right-radius: 18px;
-        animation: a4 5s ease forwards alternate-reverse;
-    }
-}
-.fa-check-circle:before{
-    display: none;
-    &:hover{
-        display: $display;
-        transform: rotate(90deg);
-        background-color: $tertiary-color;
-        color: white;
-        height: 100%;
-        padding-top: 10%;
-        position:absolute;
-        right:0%;
-        border-top-right-radius: 18px;
-        border-bottom-right-radius: 18px;
-        animation: a4 5s ease backwards alternate-reverse;
-    }
-}*/
-.entrees {
-  animation: a3 1s ease 0s 1 normal; }
-  .entrees__card:hover {
-    cursor: pointer; }
-  .entrees__dish-details {
-    color: gray; }
+.entrees__card:hover {
+  cursor: pointer; }
+
+.entrees__dish-details {
+  color: gray; }
+
+.done {
+  position: absolute;
+  background-color: #99E2D0;
+  color: white;
+  right: 0px;
+  top: 0px;
+  height: 100%;
+  width: 45px;
+  border-radius: 0px 18px 18px 0px;
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .main-dish {
   display: flex;
@@ -382,11 +425,6 @@ h2 span:hover {
   .desserts__dish-details {
     color: gray; }
 
-/*@keyframes a4{
-    to{
-        width: 20%;
-    }
-}*/
 footer {
   display: flex;
   justify-content: center;
@@ -417,9 +455,9 @@ footer {
   align-items: flex-start;
   gap: 8px; }
 
-.contact {
+footer .contact {
   color: white; }
-  .contact:hover {
+  footer .contact:hover {
     cursor: pointer; }
 
 .contact .section-title {
@@ -452,19 +490,17 @@ footer {
   .contact .form-fields .input {
     padding: .5rem 1rem; }
 
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 600px) {
   html {
     height: 1800px; }
-  .header {
-    /*&__explore{
-
-        }*/ }
-    .header__logo {
-      height: 20%; }
-      .header__logo img {
-        margin-left: 223px; }
-    .header__location {
-      height: 15%; }
+  .header__logo {
+    height: 20%; }
+    .header__logo img {
+      margin-left: 223px; }
+  .header__location {
+    height: 15%; }
+  .header__slogan p span {
+    margin-left: 0px; }
   .how-it-works h1 {
     margin-right: 62%; }
   .how-it-works .fa-solid {
@@ -499,11 +535,28 @@ footer {
       cursor: pointer;
       animation: a1 infinite 2s ease-in-out; } }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 768px) {
+  .menu-1__body, .menu-2__body, .menu-3__body, .menu-4__body {
+    margin-top: 1%; }
+  .header__logo {
+    height: 23%; }
+  .how-it-works h1 {
+    margin-right: 65%; }
+  .restaurants h1 {
+    margin-right: 66%; }
   .header-menu__logo a {
-    height: 100px; }
-  .main-menu__entry h1 {
+    height: 85px; }
+    .header-menu__logo a img {
+      width: 57%;
+      height: 64px; }
+  .header-menu__logo img {
+    height: 250px; }
+  .fa-solid {
     font-size: xxx-large; }
+  .main-menu__entry {
+    flex-direction: column; }
+    .main-menu__entry h1 {
+      font-size: xxx-large; }
   .main-menu img {
     width: 5%; }
   .main-menu__order {
@@ -522,9 +575,10 @@ footer {
       cursor: pointer;
       animation: a1 infinite 2s ease-in-out; }
   h2 {
-    font-size: x-large; }
+    font-size: x-large;
+    margin-right: 72%; }
   footer {
-    gap: 30%;
+    gap: 13%;
     padding-bottom: 8%;
     padding-left: 9%; }
   .footer__header {
