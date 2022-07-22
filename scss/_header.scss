@@ -1,0 +1,119 @@
+%cover{
+    object-fit: cover;
+}
+@mixin slogan {
+    display: $display;
+}
+.loading-spinner{
+    background-color: whitesmoke;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 999;
+    animation: animationLoading 1s ease 2s 1 normal forwards;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loader {
+    border: 16px solid #c8ede4;
+    border-top: 16px solid $tertiary-color; 
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+}
+.header{
+    &__logo{
+        height: 15%;
+        background-color: $fifth-color;
+        img{
+            @extend %cover;
+            width:$secondary-width;
+            margin:15px 60px 10px 100px;
+        }
+    }
+    &__location{
+        width: $primary-width;
+        height:12%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        padding-right: 60px;
+        padding-left: 20px;
+        background-color:#e6e6e6;
+        box-shadow:inset #0000000a 0px 6px 3px 0px;
+        p{
+            font-size:1.25em;
+        }
+    }
+    &__slogan-explore{
+        width:$primary-width;
+        height: 56%;
+        background-color:$fourth-color;
+    }
+    &__slogan{
+        padding-top: 35px;
+        h1{
+            @include slogan;
+            font-size: 1.5em;
+            font-weight: 900;
+            margin-left: 60px;
+        }
+        p{
+           @include slogan;
+           color: gray;
+           font-weight:100;
+           font-size: larger;
+           margin: 35px 45px 0px 45px;
+           span{
+            margin-left:90px ;
+           }
+        }
+    }
+    &__explore{
+        display: $display;
+        width: 60%;
+        height: 51px;
+        margin-top: 35px;
+        margin-left: 70px;
+        padding: 18px 0px 0px 40px;
+        background-image: $gradient;
+        color:white;
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+}
+.header-menu{
+    height:16%;
+    &__logo{
+        a{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 70px;
+            background-color: $fifth-color;
+            padding-right: 16%;
+            img{
+                width: $secondary-width;
+                @extend %cover;
+            }
+        }
+        img{
+            @extend %cover;
+            width: $primary-width;
+        }
+    }  
+}
+.fa-arrow-left{
+    font-size: x-large;
+}
+.fa-arrow-left{
+    font-size: x-large;
+}
+
+
+
+
+
