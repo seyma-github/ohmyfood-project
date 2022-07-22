@@ -1,0 +1,29 @@
+@mixin footer($gap){
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap:$gap;
+}
+footer{
+    @include footer(5%);
+    padding-bottom: 8%;
+    flex-direction: column;
+    position:relative;
+    background-color: #343232;
+    color: white;
+    padding-top: 10%;
+    padding-left: 11%;
+}
+.footer{
+    &__header{
+        font-family:$primary-font;
+        font-size: larger;
+        margin-bottom: 5%;
+    }
+    &__suggest{
+        @include footer(8px);
+    }
+    &__partner{
+        @include footer(8px);
+    }
+}
