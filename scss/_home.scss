@@ -1,0 +1,230 @@
+%box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    width: 80%;
+    height: 18%;
+    padding-left: 10%;
+    background-color: $fourth-color;
+    border-radius: 27px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+%numbers{
+    position: absolute;
+    top:37%;
+    left:-3%;
+    color: white;
+    padding: 4px 7px;
+    border-radius: 80px;
+    background-color: $primary-color;
+}
+%new{
+    display: $display;
+    width: 25%;
+    height: 20%;
+    color: #2f7665;
+    padding-top: 2%;
+    padding-left: 22px;
+    background-color: $tertiary-color;
+    position: absolute;
+    right: 5%;
+    top:10%;
+}
+%menu{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    background-color: white;
+    border: none;
+    border-radius: 15px;
+    width: 80%;
+    height: 145.2px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+}
+%img{
+    width: $primary-width;
+    height: 88.3px;
+    border: none;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    padding: 0px;
+    margin: 0px;
+    object-fit: cover;
+}
+%margin-right{
+    margin-right: 48%;
+}
+%padding-left{
+    padding-left:7%;
+}
+%menu-body{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+%menu-name{
+    font-weight: 900;
+}
+%menu-card{
+    height: 35%;
+}
+%city-name{
+    color: gray;
+    font-weight:100;
+    margin-left: 2%;
+    width: 100%;
+}
+%hover{
+    background-color: #F1E9EF;
+    box-shadow: #26394d 0px 20px 30px -10px;
+}
+@mixin flex{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:4%;
+}
+.how-it-works{
+    @include flex;
+    height: 35%;
+    background-color: $fifth-color;
+    h1{
+        @extend %margin-right;
+    }
+    &__chose{
+        &:hover{
+            @extend %hover;
+        }
+        @extend %box;
+    }
+    &__create{
+        &:hover{
+            @extend %hover;
+        }
+        @extend %box;
+    }
+    &__go-enjoy{
+        &:hover{
+            @extend %hover;
+        }
+        @extend %box;
+    }
+    &__number{
+        @extend %numbers;
+    }
+    &__click{
+        @extend %padding-left;
+    }
+}
+.fa-store{
+    color: $primary-color;
+}
+.restaurants{
+    @include flex;
+    background-color:$fourth-color;
+    padding-top: 20%;
+    padding-bottom: 17%;
+    height: 65%;
+    h1{
+        @extend %margin-right;
+    }    
+}
+.menu-1{
+    @extend %menu;  
+    a{
+        position: relative;
+    } 
+    span{
+        @extend %new;        
+    }
+    img{
+        @extend %img;
+    }  
+    &__body{
+        @extend %menu-body;
+    }  
+    &__menu-name{
+        @extend %menu-name;
+    }
+    &__city-name{
+        @extend %city-name;
+    }
+}
+.menu-2{
+    @extend %menu; 
+    @extend %menu-card;
+    span{
+        @extend %new;        
+    }
+    img{
+        @extend %img;
+    }
+    &__body{
+        @extend %menu-body;
+    }  
+    &__menu-name{
+        @extend %menu-name;
+    }
+    &__city-name{
+        @extend %city-name;
+    }
+}
+.menu-3{
+    @extend %menu; 
+    @extend %menu-card;
+    img{
+        @extend %img;
+    }
+    &__body{
+        @extend %menu-body;
+    }  
+    &__menu-name{
+        @extend %menu-name;
+    }
+    &__city-name{
+        @extend %city-name;
+    }
+}
+.menu-4{
+    @extend %menu;  
+    @extend %menu-card;
+    img{
+        @extend %img;
+    }
+    &__body{
+        @extend %menu-body;
+    }  
+    &__menu-name{
+        @extend %menu-name;
+    }
+    &__city-name{
+        @extend %city-name;
+    }
+}
+.fa-heart {
+    display: inline-block;
+    font-size: x-large;
+    position: absolute;
+    right: 9%;
+    bottom: 14%;
+    transition:all 3s ease-in-out;
+    cursor: pointer;
+ }
+.fa-cog{
+    &:active{
+        color: #9356DC;
+    }   
+    &:focus{
+        color: #9356DC;
+    }
+}
+
+
+
