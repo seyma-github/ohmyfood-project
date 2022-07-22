@@ -1,0 +1,239 @@
+@media only screen and (min-width:600px){
+    html{
+        height: 1800px;
+    }
+    .header{
+        &__logo {
+            height: 20%;
+            img{
+                margin-left: 223px;
+            }
+        }
+        &__location{
+            height: 15%;
+        }
+        &__slogan{
+            p{
+                span{
+                    margin-left: 0px;
+                }
+            }
+        }
+    }    
+    .how-it-works{
+        h1{
+            margin-right: 62%;
+        }
+        .fa-solid{
+            font-size: large;
+        }
+        .fas{
+            font-size: large;
+        }
+        &__number{
+            left: -1%;
+        }
+        &__click{
+            font-size: large;
+        }
+    }
+    .restaurants{
+        h1{
+            margin-right: 62%; 
+        }
+    }    
+    .menu-1{
+        span{
+            padding-top: 1%;
+            padding-left: 57px;
+        }
+    }
+    .menu-2{
+        span{
+            padding-top: 1%;
+            padding-left: 57px;
+        }
+    }
+    .main-menu{ 
+        &__order{
+            display: $display;
+            font-size: x-large;
+            width: 61%;
+            height: 5%;
+            margin-bottom: 5%;
+            margin-left: 19%;
+            padding: 4% 28% 7% 26%;
+            background-color: $primary-color;
+            color:white;
+            border-radius: 47px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            &:hover{
+                cursor: pointer;
+                animation: a1 infinite 2s ease-in-out;
+            }
+        }
+    }
+}
+@media only screen and (min-width:768px){
+    %menu-margin{
+        margin-top: 1%;  
+    }
+    .header{
+        &__logo {
+            height: 23%;
+        }
+    }
+    .how-it-works{
+        h1{
+            margin-right: 65%;
+        }
+    }
+    .restaurants{
+        h1{
+            margin-right: 66%;
+        }
+    }
+    .header-menu{
+        &__logo{
+            a {
+                height: 85px;
+                img{
+                    width: 57%;
+                    height: 64px;
+                   }
+            }
+            img{
+                height: 250px;
+            }
+        }
+    }
+    .fa-solid{
+        font-size:xxx-large;
+    }    
+    .main-menu{
+        &__entry{
+            flex-direction: column;
+            h1{
+                font-size: xxx-large;
+            }
+        }
+        img {
+        width: 5%;
+        }
+        &__order{
+            display: $display;
+            font-size: x-large;
+            width: 61%;
+            height: 5%;
+            margin-bottom: 5%;
+            margin-left: 19%;
+            padding: 3% 28% 5% 28%;
+            background-color: $primary-color;
+            color:white;
+            border-radius: 47px;
+            box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+            &:hover{
+                cursor: pointer;
+                animation: a1 infinite 2s ease-in-out;
+            }
+        }
+    }
+    .menu-1{
+        &__body{
+            @extend %menu-margin;   
+        }
+    }
+    .menu-2{
+        &__body{
+            @extend %menu-margin;   
+        }
+    }
+    .menu-3{
+        &__body{
+            @extend %menu-margin;  
+        }
+    }
+    .menu-4{
+        &__body{
+            @extend %menu-margin;   
+        }
+    }
+h2{
+    font-size: x-large;
+    margin-right: 72%;
+}
+footer{
+    gap: 13%;
+    padding-bottom: 8%;
+    padding-left: 9%;
+}
+.footer{
+    &__header{
+        margin-bottom: 3%;
+    }
+}
+}
+@media only screen and (min-width:992px){
+    %h1-and-p{
+        display: $display;
+        font-size:medium;
+        height: 51px;
+        margin-top: 35px;
+        margin-left: 70px;
+        background-image: $gradient;
+        color:white;
+        border-radius: 25px;
+        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    }
+    .header{
+        height: 350px;
+        &__logo {
+            padding-left: 8%;
+            img{
+                margin-top: 18px;
+            }
+        }
+        &__slogan-explore{
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            position: relative;
+        }
+        &__slogan{
+            display: flex;
+            margin-left: 15%;
+            h1{
+                @extend %h1-and-p;
+                width: 72%;
+                padding: 18px 0px 0px 40px;
+            }
+            p{
+                @extend %h1-and-p;
+                width: 98%;
+                padding: 11px 0px 0px 25px;                
+            }
+        }
+        &__explore{
+            position: absolute;
+            width: 24%;
+            bottom: 0px;
+            left: 30%;
+        }
+    }    
+    .header-menu{
+        &__logo{
+            a{
+                img{
+                    height: 82px;;
+                }
+            }
+        }
+    }
+    h2{
+        font-size: x-large;
+        margin-right: 75%;
+    }
+    footer{
+        padding-left: 11%;
+    }
+}
