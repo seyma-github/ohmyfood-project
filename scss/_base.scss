@@ -1,0 +1,100 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+html{
+    height: 1800px;
+}
+body{
+    font-family: $secondary-font;
+    height: 100%;
+}
+main{
+    display: flex;
+    height: 70%;
+    flex-direction: column;
+    justify-content: space-between;
+}
+header{
+    height: 20%;
+    background-color: #ECE8EE;
+}
+footer{
+    height: 15%;
+}
+a{
+    text-decoration: none;
+    color:black;
+    height: 145.8px;
+}
+h2{
+    color:gray;
+    font-size: medium;
+    margin-right: 65%;
+}
+.€ {
+    color: black;
+    display:$display;
+    position: absolute;
+    right: 9%;
+    bottom: 16%;
+}
+@keyframes animationLoading {
+    0% {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+  
+    100% {
+      opacity: 0;
+      transform: rotate(-540deg) scale(0);
+    }
+  }
+@keyframes spin {
+    0% { 
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg); 
+    }
+  }
+@keyframes a1{
+    to{
+        background-color: $secondary-color;
+    }
+}
+@keyframes a2{
+    to{
+        background-color: $primary-color;
+    }
+}
+@keyframes a3{
+	0%{  
+		opacity: 0 ;
+		transform: translateY(20px) ;
+    }
+	100% {
+		opacity: 1 ;
+		transform: translateY(0) ;
+    }
+}
+@keyframes a4 {
+	0% {
+		transform: rotate(0);
+	}
+	100% {
+		transform: rotate(360deg);
+	}
+}
+@keyframes a5 {
+	0% {
+    opacity:1;
+		transform: translateX(0);
+	}
+	100% {
+    opacity:0;
+		transform: translateX(100px);
+	}
+}
+
