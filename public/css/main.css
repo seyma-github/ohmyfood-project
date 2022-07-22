@@ -299,10 +299,14 @@ h2 {
   position: absolute;
   right: 9%;
   bottom: 14%;
-  transition: background-color 3s ease-in-out;
+  transition: all 3s ease-in-out;
   cursor: pointer; }
-  .fa-heart:active {
-    background-color: linear-gradient(180deg, #9356DC, #FF79DA); }
+
+.fa-cog:active {
+  color: #9356DC; }
+
+.fa-cog:focus {
+  color: #9356DC; }
 
 .entrees__card, .main-dish__card, .desserts__card {
   display: flex;
@@ -583,3 +587,47 @@ footer .contact {
     padding-left: 9%; }
   .footer__header {
     margin-bottom: 3%; } }
+
+@media only screen and (min-width: 992px) {
+  .header__slogan h1, .header__slogan p {
+    display: inline-block;
+    font-size: medium;
+    height: 51px;
+    margin-top: 35px;
+    margin-left: 70px;
+    background-image: linear-gradient(180deg, #FF79DA, #9356DC);
+    color: white;
+    border-radius: 25px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; }
+  .header {
+    height: 350px; }
+    .header__logo {
+      padding-left: 8%; }
+      .header__logo img {
+        margin-top: 18px; }
+    .header__slogan-explore {
+      display: flex;
+      flex-direction: row;
+      align-items: baseline;
+      position: relative; }
+    .header__slogan {
+      display: flex;
+      margin-left: 15%; }
+      .header__slogan h1 {
+        width: 72%;
+        padding: 18px 0px 0px 40px; }
+      .header__slogan p {
+        width: 98%;
+        padding: 11px 0px 0px 25px; }
+    .header__explore {
+      position: absolute;
+      width: 24%;
+      bottom: 0px;
+      left: 30%; }
+  .header-menu__logo a img {
+    height: 82px; }
+  h2 {
+    font-size: x-large;
+    margin-right: 75%; }
+  footer {
+    padding-left: 11%; } }
