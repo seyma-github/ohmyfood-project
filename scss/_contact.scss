@@ -1,0 +1,57 @@
+footer{
+    .contact{
+        color:white;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}
+.contact {
+    .section-title{
+        color:black;
+        margin-top: 15%;
+        margin-bottom: 15%;
+        padding-left: 12%;
+    }
+    .form-fields {
+        display: grid;
+        grid-template-areas: 
+            'name'
+            'email'
+            'subject'
+            'phone'
+            'message'
+            'message'            
+            'button'
+            'button'; 
+        gap: 1rem;
+        margin-bottom: 1rem;
+
+        .name { 
+            grid-area: name;
+        }
+        .email {
+            grid-area: email;
+        }    
+        .phone {
+            grid-area: phone;
+        }         
+        .subject {
+            grid-area: subject;
+        }
+        .message {
+            grid-area: message;
+            height: 180px;
+        }          
+        .btn {
+            grid-area: button;
+            &:hover{
+                color:white;
+                background-color: black;
+            }
+        }
+        .input {
+            padding: .5rem 1rem;
+        }
+    }
+}
