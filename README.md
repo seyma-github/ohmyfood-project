@@ -1,4 +1,4 @@
-# ohmyfood-project
+# Ohmyfood-project
 
 # Description
 Project aims to create a 100% mobile-friendly site that lists the menus of gourmet restaurants.
