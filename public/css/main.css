@@ -61,7 +61,7 @@ h2 {
 
 @keyframes a2 {
   to {
-    background-color: #9356DC; } }
+    color: #9356DC; } }
 
 @keyframes a3 {
   0% {
@@ -87,6 +87,11 @@ h2 {
 
 .header__logo img, .header-menu__logo a img, .header-menu__logo img, .main-menu img {
   object-fit: cover; }
+
+.header__slogan p, .header__slogan-p2 {
+  color: gray;
+  font-weight: 100;
+  font-size: larger; }
 
 .loading-spinner {
   background-color: whitesmoke;
@@ -130,24 +135,24 @@ h2 {
 
 .header__slogan-explore {
   width: 100%;
-  height: 56%;
+  height: 66%;
+  width: 100%;
   background-color: #ECE8EE; }
 
 .header__slogan {
   padding-top: 35px; }
-  .header__slogan h1 {
-    display: inline-block;
-    font-size: 1.5em;
+  .header__slogan-p1 {
+    font-size: x-large;
     font-weight: 900;
-    margin-left: 60px; }
+    color: black;
+    margin-left: 20%; }
   .header__slogan p {
     display: inline-block;
-    color: gray;
-    font-weight: 100;
-    font-size: larger;
     margin: 35px 45px 0px 45px; }
-    .header__slogan p span {
-      margin-left: 90px; }
+  .header__slogan-p2 {
+    margin: 0px 0px 0px 100px;
+    margin-left: 100px;
+    padding-left: 37px; }
 
 .header__explore {
   display: inline-block;
@@ -299,14 +304,12 @@ h2 {
   position: absolute;
   right: 9%;
   bottom: 14%;
-  transition: all 3s ease-in-out;
+  opacity: 0.4;
   cursor: pointer; }
 
-.fa-cog:active {
-  color: #9356DC; }
-
-.fa-cog:focus {
-  color: #9356DC; }
+.fa-heart:active {
+  opacity: 1;
+  animation: a2 forwards 3s ease-in-out; }
 
 .entrees__card, .main-dish__card, .desserts__card {
   display: flex;
@@ -495,6 +498,8 @@ footer .contact {
     padding: .5rem 1rem; }
 
 @media only screen and (min-width: 600px) {
+  .menu-1__body, .menu-2__body, .menu-3__body, .menu-4__body {
+    margin-top: 2%; }
   html {
     height: 1800px; }
   .header__logo {
@@ -503,8 +508,23 @@ footer .contact {
       margin-left: 223px; }
   .header__location {
     height: 15%; }
-  .header__slogan p span {
+  .header__slogan-explore {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%; }
+  .header__explore {
+    width: 226px;
     margin-left: 0px; }
+  .header__slogan {
+    display: flex;
+    flex-direction: column; }
+    .header__slogan-p1 {
+      margin-left: 0px; }
+    .header__slogan p {
+      margin-left: 0px; }
+    .header__slogan-p2 {
+      margin: 0px;
+      padding: 0px; }
   .how-it-works h1 {
     margin-right: 62%; }
   .how-it-works .fa-solid {
@@ -542,6 +562,8 @@ footer .contact {
 @media only screen and (min-width: 768px) {
   .menu-1__body, .menu-2__body, .menu-3__body, .menu-4__body {
     margin-top: 1%; }
+  header {
+    height: 23%; }
   .header__logo {
     height: 23%; }
   .how-it-works h1 {
@@ -555,8 +577,6 @@ footer .contact {
       height: 64px; }
   .header-menu__logo img {
     height: 250px; }
-  .fa-solid {
-    font-size: xxx-large; }
   .main-menu__entry {
     flex-direction: column; }
     .main-menu__entry h1 {
@@ -589,41 +609,10 @@ footer .contact {
     margin-bottom: 3%; } }
 
 @media only screen and (min-width: 992px) {
-  .header__slogan h1, .header__slogan p {
-    display: inline-block;
-    font-size: medium;
-    height: 51px;
-    margin-top: 35px;
-    margin-left: 70px;
-    background-image: linear-gradient(180deg, #FF79DA, #9356DC);
-    color: white;
-    border-radius: 25px;
-    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; }
-  .header {
-    height: 350px; }
-    .header__logo {
-      padding-left: 8%; }
-      .header__logo img {
-        margin-top: 18px; }
-    .header__slogan-explore {
-      display: flex;
-      flex-direction: row;
-      align-items: baseline;
-      position: relative; }
-    .header__slogan {
-      display: flex;
-      margin-left: 15%; }
-      .header__slogan h1 {
-        width: 72%;
-        padding: 18px 0px 0px 40px; }
-      .header__slogan p {
-        width: 98%;
-        padding: 11px 0px 0px 25px; }
-    .header__explore {
-      position: absolute;
-      width: 24%;
-      bottom: 0px;
-      left: 30%; }
+  header {
+    height: 23%; }
+  .header__logo {
+    height: 23%; }
   .header-menu__logo a img {
     height: 82px; }
   h2 {
