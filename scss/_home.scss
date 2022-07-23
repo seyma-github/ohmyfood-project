@@ -214,17 +214,12 @@
     position: absolute;
     right: 9%;
     bottom: 14%;
-    transition:all 3s ease-in-out;
-    cursor: pointer;
- }
-.fa-cog{
-    &:active{
-        color: #9356DC;
-    }   
-    &:focus{
-        color: #9356DC;
-    }
-}
+    opacity: 0.4;
+    cursor: pointer; }
+    .fa-heart:active {
+        opacity: 1;
+        animation: a2 forwards 3s ease-in-out; }
+
 
 
 
