@@ -1,4 +1,7 @@
 @media only screen and (min-width:600px){
+    %margin-top{
+        margin-top: 2%;
+    }
     html{
         height: 1800px;
     }
@@ -6,17 +9,33 @@
         &__logo {
             height: 20%;
             img{
-                margin-left: 223px;
+                margin-left: 172px;
             }
         }
         &__location{
             height: 15%;
         }
+        &__slogan-explore{
+            display: flex;
+            flex-direction: column;
+            padding-left: 10%;
+        }
+        &__explore{
+            width: 226px;
+            margin-left: 0px;
+        }
         &__slogan{
+            display: flex;
+            flex-direction: column;
+            &-p1{
+                margin-left: 0px;
+            }
             p{
-                span{
-                    margin-left: 0px;
-                }
+                margin-left: 0px;
+            }
+            &-p2{
+                margin: 0px;
+                padding: 0px;
             }
         }
     }    
@@ -43,15 +62,31 @@
         }
     }    
     .menu-1{
+        &__body{
+            @extend  %margin-top;
+        }
         span{
             padding-top: 1%;
             padding-left: 57px;
         }
     }
     .menu-2{
+        &__body{
+            @extend  %margin-top;
+        }
         span{
             padding-top: 1%;
             padding-left: 57px;
+        }
+    }
+    .menu-3{
+        &__body{
+            @extend  %margin-top;
+        }
+    }
+    .menu-4{
+        &__body{
+            @extend  %margin-top;
         }
     }
     .main-menu{ 
@@ -73,10 +108,18 @@
             }
         }
     }
+    .contact{
+        .section-title{
+            padding-left: 2%;
+        }
+    }
 }
 @media only screen and (min-width:768px){
     %menu-margin{
         margin-top: 1%;  
+    }
+    header{
+        height: 23%;
     }
     .header{
         &__logo {
@@ -106,10 +149,7 @@
                 height: 250px;
             }
         }
-    }
-    .fa-solid{
-        font-size:xxx-large;
-    }    
+    }   
     .main-menu{
         &__entry{
             flex-direction: column;
@@ -158,68 +198,38 @@
             @extend %menu-margin;   
         }
     }
-h2{
-    font-size: x-large;
-    margin-right: 72%;
-}
-footer{
-    gap: 13%;
-    padding-bottom: 8%;
-    padding-left: 9%;
-}
-.footer{
-    &__header{
-        margin-bottom: 3%;
+    h2{
+        font-size: x-large;
+        margin-right: 72%;
     }
-}
+    footer{
+        gap: 13%;
+        padding-bottom: 8%;
+        padding-left: 9%;
+    }
+    .footer{
+        &__header{
+            margin-bottom: 3%;
+        }
+    }
+    .contact{
+        .section-title{
+            padding-left: 1%;
+        }
+    }
 }
 @media only screen and (min-width:992px){
-    %h1-and-p{
-        display: $display;
-        font-size:medium;
-        height: 51px;
-        margin-top: 35px;
-        margin-left: 70px;
-        background-image: $gradient;
-        color:white;
-        border-radius: 25px;
-        box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    header{
+        height: 23%;
     }
     .header{
-        height: 350px;
         &__logo {
-            padding-left: 8%;
+            height: 23%;
             img{
-                margin-top: 18px;
+                margin-left: 30%;
             }
         }
-        &__slogan-explore{
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            position: relative;
-        }
-        &__slogan{
-            display: flex;
-            margin-left: 15%;
-            h1{
-                @extend %h1-and-p;
-                width: 72%;
-                padding: 18px 0px 0px 40px;
-            }
-            p{
-                @extend %h1-and-p;
-                width: 98%;
-                padding: 11px 0px 0px 25px;                
-            }
-        }
-        &__explore{
-            position: absolute;
-            width: 24%;
-            bottom: 0px;
-            left: 30%;
-        }
-    }    
+    }   
     .header-menu{
         &__logo{
             a{
@@ -235,5 +245,10 @@ footer{
     }
     footer{
         padding-left: 11%;
+    }
+    .contact{
+        .section-title{
+            padding-left: 1%;
+        }
     }
 }
