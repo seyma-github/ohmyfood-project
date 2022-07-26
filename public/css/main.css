@@ -304,11 +304,9 @@ h2 {
   position: absolute;
   right: 9%;
   bottom: 14%;
-  opacity: 0.4;
   cursor: pointer; }
 
 .fa-heart:active {
-  opacity: 1;
   animation: a2 forwards 3s ease-in-out; }
 
 .entrees__card, .main-dish__card, .desserts__card {
@@ -469,9 +467,10 @@ footer .contact {
 
 .contact .section-title {
   color: black;
+  font-family: "Shrikhand", cursive;
   margin-top: 15%;
-  margin-bottom: 15%;
-  padding-left: 12%; }
+  margin-bottom: 10%;
+  padding-left: 3%; }
 
 .contact .form-fields {
   display: grid;
@@ -490,7 +489,9 @@ footer .contact {
     grid-area: message;
     height: 180px; }
   .contact .form-fields .btn {
-    grid-area: button; }
+    grid-area: button;
+    height: 35px;
+    font-weight: bold; }
     .contact .form-fields .btn:hover {
       color: white;
       background-color: black; }
@@ -505,7 +506,7 @@ footer .contact {
   .header__logo {
     height: 20%; }
     .header__logo img {
-      margin-left: 223px; }
+      margin-left: 172px; }
   .header__location {
     height: 15%; }
   .header__slogan-explore {
@@ -557,7 +558,9 @@ footer .contact {
     box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px; }
     .main-menu__order:hover {
       cursor: pointer;
-      animation: a1 infinite 2s ease-in-out; } }
+      animation: a1 infinite 2s ease-in-out; }
+  .contact .section-title {
+    padding-left: 2%; } }
 
 @media only screen and (min-width: 768px) {
   .menu-1__body, .menu-2__body, .menu-3__body, .menu-4__body {
@@ -566,6 +569,8 @@ footer .contact {
     height: 23%; }
   .header__logo {
     height: 23%; }
+    .header__logo img {
+      margin-left: 28%; }
   .how-it-works h1 {
     margin-right: 65%; }
   .restaurants h1 {
@@ -606,17 +611,23 @@ footer .contact {
     padding-bottom: 8%;
     padding-left: 9%; }
   .footer__header {
-    margin-bottom: 3%; } }
+    margin-bottom: 3%; }
+  .contact .section-title {
+    padding-left: 1%; } }
 
 @media only screen and (min-width: 992px) {
   header {
     height: 23%; }
   .header__logo {
     height: 23%; }
+    .header__logo img {
+      margin-left: 30%; }
   .header-menu__logo a img {
     height: 82px; }
   h2 {
     font-size: x-large;
     margin-right: 75%; }
   footer {
-    padding-left: 11%; } }
+    padding-left: 11%; }
+  .contact .section-title {
+    padding-left: 1%; } }
